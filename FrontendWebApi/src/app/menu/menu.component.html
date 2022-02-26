@@ -1,0 +1,39 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="dropdown" style="margin-left: 10px;">
+        <button
+          class="btn btn-light dropdown-toggle"
+          type="button"
+          id="menu"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li>
+            <a
+              class="dropdown-item"
+              [routerLink]="['/team']"
+              >Team Info</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              [routerLink]="['/training']"
+              >Training Plan</a
+            >
+          </li>
+        </ul>
+      </div>
+      <span class="navbar-brand mb-0 h1" style="cursor: pointer;" [routerLink]="['/home']">APM Sustaining Engine</span>
+      <span class="btn btn-light" style="margin-right: 10px;">Welcome {{this.username}}</span>
+</nav>
+
+<div *ngIf="hideaboutme" class="mx-auto adjust" style="width: 700px; height: 400px;">
+  <textarea class="form-control" id="aboutme" rows="10" disabled>About Us 
+
+Allscripts has been recognized by Frost & Sullivan with the 2019 Best Practices Award for its population health management solutions.
+According to the report, Allscripts has “pioneered the concept of an open yet connected platform architecture, fueled by a real-time application programming interface (API) that incorporates disparate medical evidence seamlessly across the care continuum.”
+  </textarea>
+</div>
